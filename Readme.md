@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Вадим Рахманов](https://up.htmlacademy.ru/adaptive/19/user/1150187).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/id198062).
 
 ---
 
