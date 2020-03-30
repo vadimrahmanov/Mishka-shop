@@ -29,57 +29,65 @@
     </header>
     <main>
       <div class="banner banner--catalog">
-        <h1>Каталог товаров</h1>
+        <h1 class="banner__title">Каталог товаров</h1>
       </div>
       <section class="catalog">
         <h2 class="catalog__title visually-hidden">Наш ассортимент</h2>
         <ul class="catalog__list">
           <li>
-            <article class="catalog-item">
-              <a class="catalog__image-link" href="">
-                <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Здесь будет описание">
+            <article class="product">
+              <a class="product__image-link" href="">
+                <img class="product__image" src="https://via.placeholder.com/260x195" alt="Здесь будет описание">
               </a>
-              <h2 class="catalog__product-title">
-                <a class="catalog__product-link">Зайчик-попрыгайчик</a>
+              <h2 class="product__title">
+                <a class="product__link" href="">Зайчик-попрыгайчик</a>
               </h2>
-              <p class="catalog__details">Рост 30 см, вес 200 г</p>
-              <div class="catalog__order">
-                <p class="catalog__price">1 200 руб.</p>
-                <button class="catalog__btn-order" type="button">Заказать</button>
+              <p class="product__details">Рост 30 см, вес 200 г</p>
+              <div class="product__order">
+                <p class="product__price">1 200 руб.</p>
+                <button class="product__btn-order" type="button">Заказать</button>
               </div>
             </article>
           </li>
           <li>
-            <article class="catalog-item">
-              <a class="catalog__image-link" href="">
-                <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Здесь будет описание">
+            <article class="product">
+              <a class="product__image-link" href="">
+                <img class="product__image" src="https://via.placeholder.com/260x195" alt="Здесь будет описание">
               </a>
-              <h2 class="catalog__product-title">
-                <a class="catalog__product-link">Корзинка для белья</a>
+              <h2 class="product__title">
+                <a class="product__link" href="">Корзинка для белья</a>
               </h2>
-              <p class="catalog__details">Диаметр 15 см, высота 10 см</p>
-              <div class="catalog__order">
-                <p class="catalog__price">690 руб.</p>
-                <button class="catalog__btn-order" type="button">Заказать</button>
+              <p class="product__details">Диаметр 15 см, высота 10 см</p>
+              <div class="product__order">
+                <p class="product__price">690 руб.</p>
+                <button class="product__btn-order" type="button">Заказать</button>
               </div>
             </article>
           </li>
           <li>
-            <article class="catalog-item">
-              <a class="catalog__image-link" href="">
-                <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Здесь будет описание">
+            <article class="product">
+              <a class="product__image-link" href="">
+                <img class="product__image" src="https://via.placeholder.com/260x195" alt="Здесь будет описание">
               </a>
-              <h2 class="catalog__product-title">
-                <a class="catalog__product-link">Большая корзинка для игрушек</a>
+              <h2 class="product__title">
+                <a class="product__link" href="">Большая корзинка для игрушек</a>
               </h2>
-              <p class="catalog__details">Диаметр 30 см, высота 30 см</p>
-              <div class="catalog__order">
-                <p class="catalog__price">1 500 руб.</p>
-                <button class="catalog__btn-order" type="button">Заказать</button>
+              <p class="product__details">Диаметр 30 см, высота 30 см</p>
+              <div class="product__order">
+                <p class="product__price">1 500 руб.</p>
+                <button class="product__btn-order" type="button">Заказать</button>
               </div>
             </article>
           </li>
         </ul>
+      </section>
+      <section class="production-process">
+        <h2 class="production-process__title">Процесс производства</h2>
+        <div class="player">
+          <img class="player__video" src="https://via.placeholder.com/260x150" alt="Здесь будет видео">
+          <p class="player__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        </div>
+        <a class="production-process__order-btn" href="">Сделать заказ</a>
       </section>
     </main>
     <footer class="footer">
@@ -107,6 +115,23 @@
         </a>
       </div>
     </footer>
-  </main>
-</body>
+
+    <section class="modal-basket">
+      <h2 class="modal-basket__title">Добавить в корзину</h2>
+      <p class="modal-basket__description">Выберите размер:</p>
+      <ul class="size-list">
+        <li class="size-list__item">
+          <button class="size-list__button size-list__button--s" type="button">S</button>
+        </li>
+        <li class="size-list__item">
+          <button class="size-list__button size-list__button--m" type="button">M</button>
+        </li>
+        <li class="size-list__item">
+          <button class="size-list__button size-list__button--l" type="button">L</button>
+        </li>
+      </ul>
+      <button class="modal-basket__add-order" type="button">Добавить</button>
+    </section>
+
+  </body>
 </html>
