@@ -1,0 +1,20 @@
+.banner {
+  color: #010000;
+  background-color: @banner-color;
+  min-height: @banner-height;
+
+  &--index {
+    background-image: @banner-index-bg;
+    min-height: 300px;
+  }
+
+  &--catalog {
+    margin-bottom: 30px;
+  }
+}
+
+.banner__title {
+  font-size: 27px;
+  line-height: 30px;
+  .margin-reset();
+}
