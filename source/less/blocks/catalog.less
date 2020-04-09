@@ -1,3 +1,41 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .catalog__list {
   .list-reset();
+}
+
+.catalog__list-item {
+  width: 260px;
+}
+
+@media all and (min-width: @tablet-width) {
+  .catalog {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .catalog__list-item {
+    width: 670px;
+  }
+}
+
+@media all and (min-width: @desktop-width) {
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .catalog__list-item {
+    width: 316px;
+    padding-right: 52px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }

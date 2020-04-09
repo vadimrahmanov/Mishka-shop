@@ -1,18 +1,32 @@
 .about {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 22px;
 }
 
 .about__title {
   .title();
   margin: 0;
   padding-top: 96px;
+  align-self: flex-start;
 }
 
-.about__list {
-  .list-reset();
+@media all and (min-width: @tablet-width) {
+  .about__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
-.about__list-item {
-  line-height: 20px;
-  padding-top: 88px;
+@media all and (min-width: @desktop-width) {
+  .about {
+    align-items: center;
+  }
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+    width: 665px;
+    align-self: auto;
+  }
 }

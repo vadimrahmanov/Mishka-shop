@@ -1,11 +1,17 @@
 .banner {
+  text-align: center;
   color: #010000;
+  display: flex;
+  align-items: center;
   background-color: @banner-color;
   min-height: 177px;
+  justify-content: center;
 
   &--index {
-    background-image: url("../img/hero-mobile@1x.jpg");
     min-height: 300px;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--catalog {
@@ -16,5 +22,44 @@
 .banner__title {
   font-size: 27px;
   line-height: 30px;
-  margin: 0;
+  margin: 0 10px;
+}
+
+@media all and (min-width: @tablet-width) {
+  .banner__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 121px;
+
+    &--catalog {
+      padding-top: 0;
+    }
+  }
+
+  .banner {
+    align-items: flex-start;
+
+    &--index {
+      min-height: 697px;
+      background-image: url("../img/hero-tablet@1x.jpg");
+    }
+
+    &--catalog {
+      margin-bottom: 79px;
+      align-items: center;
+    }
+  }
+}
+
+@media all and (min-width: @desktop-width) {
+  .banner {
+    &--catalog {
+      margin-bottom: 128px;
+    }
+  }
+
+  .banner__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
