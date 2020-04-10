@@ -27,15 +27,13 @@
 @media all and (min-width: @desktop-width) {
   .catalog__list {
     display: flex;
+    flex-basis: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .catalog__list-item {
     width: 316px;
-    padding-right: 52px;
-
-    &:last-child {
-      padding-right: 0;
-    }
   }
 }
