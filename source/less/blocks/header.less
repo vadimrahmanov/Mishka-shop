@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .header__logo {
   display: block;
   width: 86px;
@@ -21,12 +25,12 @@
   min-height: 79px;
 }
 
-@media all and (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .header__logo {
     margin: initial;
     padding-left: 51px;
     flex-grow: 1;
-    background-color: #ffffff;
+    background-color: @white;
   }
 
   .header__toggle {
@@ -38,7 +42,7 @@
   }
 }
 
-@media all and (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .header__logo {
     text-align: center;
     order: 3;

@@ -21,7 +21,7 @@
   border-collapse: collapse;
 
   tr {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid @border-gray;
   }
 
   td {
@@ -36,7 +36,7 @@
   order: 3;
 }
 
-@media all and (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .week-offer-info {
     order: 3;
     width: 293px;
@@ -66,7 +66,7 @@
   }
 }
 
-@media all and (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .week-offer-info {
     margin-left: 185px;
     padding-top: 170px;

@@ -24,12 +24,13 @@
     width: 240px;
   }
 
-  &--gift {
+  &--gift,
+  &--rocket {
     width: 230px;
   }
 }
 
-@media all and (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .about-list-group {
     display: flex;
   }
@@ -72,7 +73,7 @@
   }
 }
 
-@media all and (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .about-list-group__list {
     width: 330px;
   }

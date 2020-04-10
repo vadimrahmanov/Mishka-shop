@@ -1,5 +1,5 @@
 .product {
-  border: 1px solid #ececec;
+  border: 1px solid @border-gray;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -7,9 +7,7 @@
 }
 
 .product__title {
-  &--toys-basket {
-    width: 160px;
-  }
+  width: 180px;
 }
 
 .product__link {
@@ -22,12 +20,7 @@
   line-height: 30px;
   color: @grayish;
   margin-top: 0;
-  width: 175px;
-
-  &--cloth-basket,
-  &--toys-basket {
-    width: 185px;
-  }
+  width: 185px;
 }
 
 .product__price {
@@ -42,16 +35,14 @@
   width: 175px;
 }
 
-@media all and (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .product {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .product__title {
-    &--toys-basket {
-      width: 190px;
-    }
+    width: 220px;
   }
 
   .product__link {
@@ -60,20 +51,12 @@
 
   .product__details {
     font-size: 15px;
-
-    &--toys-basket,
-    &--cloth-basket {
-      width: 210px;
-    }
+    width: 220px;
   }
 
   .product__order {
-    padding-top: 160px;
+    margin-top: auto;
     width: 270px;
-
-    &--toys-basket {
-      padding-top: 135px;
-    }
   }
 
   .product__price {
@@ -93,9 +76,10 @@
   }
 }
 
-@media all and (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .product {
     flex-direction: column;
+    min-height: 659px;
   }
 
   .product__image {
@@ -111,6 +95,7 @@
 
   .product__wrapper {
     padding-left: 28px;
+    min-height: 180px;
   }
 
   .product__title {
@@ -119,11 +104,6 @@
   }
 
   .product__order {
-    padding-top: 73px;
     width: 260px;
-
-    &--toys-basket {
-      padding-top: 48px;
-    }
   }
 }

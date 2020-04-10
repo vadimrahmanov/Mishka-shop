@@ -7,10 +7,10 @@
 .main-nav__list-item {
   padding-top: 32px;
   padding-bottom: 32px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid @border-gray;
 
   &--basket {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid @border-gray;
   }
 }
 
@@ -18,19 +18,21 @@
   display: none;
 }
 
-@media all and (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #f9f9f9;
+    width: @tablet-width;
+    margin: 0 auto;
+    background-color: @lightgray;
 
     &--catalog {
-      background-color: #f1f1f1;
+      background-color: @darkgray;
     }
 
     &--form {
-      background-color: #f1f1f1;
+      background-color: @darkgray;
     }
   }
 
@@ -53,7 +55,7 @@
     &--search-and-basket {
       padding-right: 51px;
       order: 2;
-      background-color: #ffffff;
+      background-color: @white;
     }
   }
 
@@ -73,8 +75,8 @@
       width: 85px;
       padding-top: 18px;
       padding-bottom: 18px;
-      border-right: 1px solid #ececec;
-      border-left: 1px solid #ececec;
+      border-right: 1px solid @border-gray;
+      border-left: 1px solid @border-gray;
     }
 
     &--basket {
@@ -98,14 +100,19 @@
   }
 }
 
-@media all and (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
   .main-nav__list {
     &--catalog-and-order {
       font-size: inherit;
       order: 1;
       padding-left: 51px;
       padding-top: 0;
-      background-color: #ffffff;
+      background-color: @white;
     }
 
     &--newstaff-and-sale {
@@ -125,7 +132,7 @@
     &--catalog {
       width: 140px;
       text-align: left;
-      border-right: 1px solid #ececec;
+      border-right: 1px solid @border-gray;
       padding-top: 30px;
       padding-bottom: 30px;
       padding-right: 35px;
