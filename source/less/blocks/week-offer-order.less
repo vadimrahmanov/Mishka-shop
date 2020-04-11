@@ -1,0 +1,27 @@
+.week-offer-order {
+  display: flex;
+  flex-direction: column;
+  order: 4;
+}
+
+.week-offer-order__price {
+  text-align: center;
+  color: @grayish;
+  margin: 0;
+  padding-bottom: 28px;
+}
+
+@media (min-width: @tablet-width) {
+  .week-offer-order__price {
+    font-size: 20px;
+    width: 292px;
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .week-offer-order__price {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+}

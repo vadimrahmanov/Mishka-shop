@@ -1,4 +1,27 @@
 .button {
   line-height: 20px;
+  text-transform: uppercase;
   color: @grayish;
+  width: 259px;
+  height: 52px;
+
+  &--catalog-buy {
+    width: 20px;
+    height: 19px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 17px;
+    width: 292px;
+    background-color: @white;
+    border: 2px solid #444444;
+
+    &--catalog-buy {
+      width: 20px;
+      background-color: buttonface;
+      border: 1px solid #000000;
+    }
+  }
 }

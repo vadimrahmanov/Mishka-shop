@@ -8,30 +8,43 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item">
+      <button class="header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="main-nav main-nav--form">
+        <a class="header__logo" href="index.html">
+          <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
+        </a>
+        <ul class="main-nav__list main-nav__list--catalog-and-order">
+          <li class="main-nav__list-item main-nav__list-item--catalog">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__list-item">
+          <li class="main-nav__list-item main-nav__list-item--order">
             <a class="main-nav__link">Вязание на заказ</a>
           </li>
-          <li class="main-nav__list-item">
+        </ul>
+        <ul class="main-nav__list main-nav__list--search-and-basket">
+          <li class="main-nav__list-item main-nav__list-item--search">
             <a class="main-nav__link" href="">Поиск по сайту</a>
           </li>
-          <li class="main-nav__list-item">
+          <li class="main-nav__list-item main-nav__list-item--basket">
             <a class="main-nav__link" href="">Корзина: пока пуста</a>
           </li>
         </ul>
+        <ul class="main-nav__list main-nav__list--newstaff-and-sale">
+          <li class="main-nav__list-item main-nav__list-item--newstaff">
+            <a class="main-nav__link" href="">Новые поступления</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--sale">
+            <a class="main-nav__link" href="">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__free-delivery">Бесплатная доставка по России</p>
       </nav>
     </header>
     <main>
       <div class="banner banner--form">
-        <h1 class="banner__title">Вязание на заказ</h1>
+        <h1 class="banner__title banner__title--form">Вязание на заказ</h1>
       </div>
       <section class="form">
         <h2 class="visually-hidden">Форма заказа</h2>
@@ -115,20 +128,21 @@
         </form>
       </section>
     </main>
-    <footer class="footer footer--form">
+    <footer class="footer">
+      <img class="footer__logo" src="img/mishka-logo.svg" width="102" height="34" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
       <ul class="social-list">
-        <li class="social-list__item social-list__item--instagram">
-          <a class="social-list__link" href="">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--instagram" href="">
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
-        <li class="social-list__item social-list__item--facebook">
-          <a class="social-list__link" href="">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--facebook" href="">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li class="social-list__item social-list__item--twitter">
-          <a class="social-list__link" href="">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--twitter" href="">
             <span class="visually-hidden">Twitter</span>
           </a>
         </li>

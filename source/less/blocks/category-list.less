@@ -1,10 +1,10 @@
 .category-list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
 }
 
 .category-list__item {
-  font-size: 19px;
-
   &--interior {
     background-color: #63d1bb;
   }
@@ -15,5 +15,30 @@
 }
 
 .category-list__link {
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  padding-left: 29px;
+  min-height: 103px;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .category-list {
+    flex-direction: row;
+    margin: 0 52px;
+  }
+
+  .category-list__item {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+    padding-left: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .category-list {
+    margin: 0 50px;
+  }
 }

@@ -8,44 +8,60 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo">
-        <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
-      </a>
+      <button class="header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item">
+        <a class="header__logo">
+          <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
+        </a>
+        <ul class="main-nav__list main-nav__list--catalog-and-order">
+          <li class="main-nav__list-item main-nav__list-item--catalog">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__list-item">
+          <li class="main-nav__list-item main-nav__list-item--order">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__list-item">
+        </ul>
+        <ul class="main-nav__list main-nav__list--search-and-basket">
+          <li class="main-nav__list-item main-nav__list-item--search">
             <a class="main-nav__link" href="">Поиск по сайту</a>
           </li>
-          <li class="main-nav__list-item">
+          <li class="main-nav__list-item main-nav__list-item--basket">
             <a class="main-nav__link" href="">Корзина: пока пуста</a>
           </li>
         </ul>
+        <ul class="main-nav__list main-nav__list--newstaff-and-sale">
+          <li class="main-nav__list-item main-nav__list-item--newstaff">
+            <a class="main-nav__link" href="">Новые поступления</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--sale">
+            <a class="main-nav__link" href="">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__free-delivery">Бесплатная доставка по России</p>
       </nav>
     </header>
     <main>
       <div class="banner banner--index">
-        <h1 class="banner__title">Милые штуки ручной работы для дома</h1>
+        <h1 class="banner__title">Милые штуки ручной<br>работы для дома</h1>
       </div>
       <ul class="category-list">
         <li class="category-list__item category-list__item--interior">
-          <a class="category-list__link" href="">Предметы интерьера</a>
+          <a class="category-list__link" href="">Предметы<br>интерьера</a>
         </li>
         <li class="category-list__item category-list__item--toys">
-          <a class="category-list__link" href="">Детские игрушки</a>
+          <a class="category-list__link" href="">Детские<br>игрушки</a>
         </li>
       </ul>
       <section class="week-offer">
-        <h2 class="week-offer__product">Вязаные корзинки</h2>
-        <h3 class="week-offer__title">Товар недели</h3>
-        <p class="week-offer__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
-        <table class="week-offer__details">
+        <hgroup class="week-offer-header">
+          <h2 class="week-offer-header__product">Вязаные корзинки</h2>
+          <h3 class="week-offer-header__title">Товар недели</h3>
+        </hgroup>
+        <div class="week-offer-info">
+          <p class="week-offer-info__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+        <table class="week-offer-info__details">
           <tr>
             <td>Цвет:</td>
             <td>&laquo;Тиффани&raquo;/серый</td>
@@ -59,20 +75,27 @@
             <td>15 см</td>
           </tr>
         </table>
-        <img class="week-offer__image" src="https://via.placeholder.com/260x315" alt="Товар недели - Вязаные корзинки">
-        <p class="week-offer__price">Цена: 990 руб.</p>
-        <button class="button" type="button">Заказать</button>
+        <div class="week-offer-order">
+          <p class="week-offer-order__price">Цена: 990 руб.</p>
+          <button class="button" type="button">Заказать</button>
+        </div>
+        <img class="week-offer-info__image" src="https://via.placeholder.com/260x315" alt="Товар недели - Вязаные корзинки">
+        </div>
       </section>
       <section class="about">
         <h2 class="about__title">Коротко о нас:</h2>
-        <ul class="about__list">
-          <li class="about__list-item about__list-item--flower">Экологически чистые материалы</li>
-          <li class="about__list-item about__list-item--banknote">Скандинавский стиль по российской цене</li>
-          <li class="about__list-item about__list-item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="about__list-item about__list-item--ball">Связано вручную с любовью и умилением</li>
-          <li class="about__list-item about__list-item--rocket">Поддержка отечественного производителя</li>
-          <li class="about__list-item about__list-item--gift">Поставляется в подарочной упаковке</li>
-        </ul>
+        <div class="about-list-group">
+          <ul class="about-list-group__list">
+            <li class="about-list-group__list-item about-list-group__list-item--flower">Экологически чистые материалы</li>
+            <li class="about-list-group__list-item about-list-group__list-item--banknote">Скандинавский стиль по российской цене</li>
+            <li class="about-list-group__list-item about-list-group__list-item--heart">Увеличивает лайки на фотографиях</li>
+          </ul>
+          <ul class="about-list-group__list">
+            <li class="about-list-group__list-item about-list-group__list-item--ball">Связано вручную с любовью и умилением</li>
+            <li class="about-list-group__list-item about-list-group__list-item--rocket">Поддержка отечественного производителя</li>
+            <li class="about-list-group__list-item about-list-group__list-item--gift">Поставляется в подарочной упаковке</li>
+          </ul>
+        </div>
       </section>
       <section class="feedback">
         <h2 class="feedback__title">Отзывы</h2>
@@ -95,26 +118,27 @@
           <p class="contacts-item__email">email: info@mimimishkashop.ru</p>
           <p class="contacts-item__address">адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
         </address>
-        <iframe class="contacts-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d544.8740234559694!2d30.323014340154394!3d59.93866765176292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2suk!4v1585492032386!5m2!1sru!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="contacts-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d544.8740234559694!2d30.323014340154394!3d59.93866765176292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2suk!4v1585492032386!5m2!1sru!2suk" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <p class="write-us">
           <a class="write-us__link" href="">Напишите нам</a>
         </p>
       </section>
       </main>
       <footer class="footer">
+        <img class="footer__logo" src="img/mishka-logo.svg" width="102" height="34" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
         <ul class="social-list">
-          <li class="social-list__item social-list__item--instagram">
-            <a class="social-list__link" href="">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--instagram" href="">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
-          <li class="social-list__item social-list__item--facebook">
-            <a class="social-list__link" href="">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--facebook" href="">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li class="social-list__item social-list__item--twitter">
-            <a class="social-list__link" href="">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--twitter" href="">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>

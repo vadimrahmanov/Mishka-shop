@@ -1,0 +1,85 @@
+.week-offer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-offer-info__description {
+  .small-text();
+  line-height: 30px;
+  width: 260px;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  order: 1;
+}
+
+.week-offer-info__details {
+  .small-text();
+  line-height: 20px;
+  width: 260px;
+  order: 2;
+  border-collapse: collapse;
+
+  tr {
+    border-bottom: 1px solid @border-gray;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.week-offer-info__image {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  order: 3;
+}
+
+@media (min-width: @tablet-width) {
+  .week-offer-info {
+    order: 3;
+    width: 293px;
+    position: relative;
+  }
+
+  .week-offer-info__description {
+    font-size: inherit;
+    width: 282px;
+    padding-bottom: 41px;
+    padding-top: 55px;
+  }
+
+  .week-offer-info__details {
+    width: 292px;
+  }
+
+  .week-offer-info__image {
+    width: 333px;
+    height: 404px;
+    position: absolute;
+    top: 0;
+    left: 315px;
+    padding-top: 55px;
+    padding-bottom: 0;
+    order: 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .week-offer-info {
+    margin-left: 185px;
+    padding-top: 170px;
+  }
+
+  .week-offer-info__image {
+    width: 525px;
+    height: 636px;
+    z-index: 0;
+    left: 322px;
+  }
+
+  .week-offer-info__description {
+    padding-bottom: 60px;
+  }
+}
