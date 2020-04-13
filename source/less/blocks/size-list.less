@@ -1,4 +1,32 @@
+.size-list {
+  .list-reset();
+  display: flex;
+  width: 260px;
+  justify-content: space-between;
+  padding-top: 28px;
+  padding-bottom: 31px;
+}
+
 .size-list__button {
+  font-size: inherit;
   line-height: 16px;
   color: @grayish;
+  width: 82px;
+  min-height: 52px;
+  border: 2px solid fade(@grayish, 10%);
+
+  &:focus {
+    border-color: @lightgreen;
+    outline-color: @lightgreen;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .size-list {
+    width: 350px;
+  }
+
+  .size-list__button {
+    width: 112px;
+  }
 }

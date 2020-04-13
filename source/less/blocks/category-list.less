@@ -6,7 +6,7 @@
 
 .category-list__item {
   &--interior {
-    background-color: #63d1bb;
+    background-color: @lightgreen;
   }
 
   &--toys {
@@ -26,13 +26,14 @@
 @media (min-width: @tablet-width) {
   .category-list {
     flex-direction: row;
+    justify-content: center;
     margin: 0 52px;
   }
 
   .category-list__item {
     font-size: 20px;
     line-height: 30px;
-    width: 100%;
+    width: 334px;
     padding-left: 36px;
   }
 }
@@ -40,5 +41,9 @@
 @media (min-width: @desktop-width) {
   .category-list {
     margin: 0 50px;
+  }
+
+  .category-list__item {
+    width: 525px;
   }
 }

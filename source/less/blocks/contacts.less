@@ -1,6 +1,48 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
-  margin: 0;
+  margin: 0 auto;
+  width: 250px;
   padding-top: 95px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: 650px 80px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: 650px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    margin-bottom: 105px;
+    background-position: 125px 80px;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    width: 150px;
+  }
+
+  .contacts__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contacts__wrapper {
+    width: 510px;
+  }
 }

@@ -1,8 +1,13 @@
+.form {
+  margin-bottom: 55px;
+}
+
 .form__description {
   font-size: 13px;
   font-weight: 400;
   color: @grayish;
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   padding-top: 29px;
   padding-bottom: 29px;
 }
@@ -12,4 +17,42 @@
   font-weight: 400;
   line-height: 16px;
   color: @grayish;
+  margin: 0;
+  padding-bottom: 31px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__description {
+    font-size: inherit;
+    line-height: 30px;
+    width: 670px;
+  }
+
+  .form__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-top: 53px;
+    width: 740px;
+    margin: 0 auto;
+  }
+
+  .form__hint {
+    font-size: inherit;
+    line-height: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__description {
+    width: 672px;
+  }
+
+  .form__wrap {
+    width: 700px;
+    padding-left: 35px;
+    justify-content: space-between;
+  }
 }

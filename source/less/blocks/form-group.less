@@ -1,4 +1,88 @@
+.form-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .form-group__title {
+  font-size: inherit;
   line-height: 16px;
-  color: #63d1bb;
+  text-transform: uppercase;
+  color: @lightgreen;
+  padding: 0;
+
+  &--email {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-group {
+    margin-top: 48px;
+
+    &:nth-child(2n+2) {
+      background-color: @darkgray;
+    }
+  }
+
+  .form-group__title {
+    position: absolute;
+    top: 15px;
+    left: 0;
+
+    &--tel {
+      top: 35px;
+    }
+
+    &--email {
+      top: 125px;
+      padding-top: 0;
+    }
+
+    &--additional {
+      top: 40px;
+    }
+  }
+
+  .form-group__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 670px;
+    margin: 0 auto;
+
+    &--colors {
+      flex-direction: row;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding-left: 175px;
+      justify-content: center;
+    }
+
+    &--text {
+      padding-left: 200px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-group__container {
+    align-items: flex-start;
+    width: 680px;
+
+    &--colors {
+      padding-left: 0;
+    }
+
+    &--text {
+      padding-left: 20px;
+      width: 705px;
+    }
+  }
+
+  .form-group__title {
+    left: -85px;
+  }
 }

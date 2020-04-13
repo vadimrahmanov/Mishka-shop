@@ -1,7 +1,8 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin: 0 22px;
+  width: 250px;
+  margin: 0 auto;
 }
 
 .about__title {
@@ -12,6 +13,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .about {
+    width: 650px;
+  }
+
   .about__title {
     font-size: 43px;
     line-height: 50px;

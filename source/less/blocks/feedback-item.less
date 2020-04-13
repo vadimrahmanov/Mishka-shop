@@ -5,6 +5,7 @@
 .feedback-item__text {
   .small-text();
   line-height: 30px;
+  width: 256px;
   margin: 0;
   padding-top: 38px;
   padding-bottom: 38px;
@@ -20,4 +21,25 @@
   line-height: 30px;
   margin: 0;
   padding-bottom: 36px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback-item__text {
+    width: 570px;
+  }
+
+  .feedback-item__name {
+    width: 220px;
+  }
+
+  .feedback-item__username {
+    width: 130px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback-item__text {
+    font-size: 17px;
+    width: 800px;
+  }
 }

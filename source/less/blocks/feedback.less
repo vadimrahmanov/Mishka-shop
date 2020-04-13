@@ -1,11 +1,69 @@
+.feedback {
+  width: 250px;
+  margin: 0 auto;
+}
+
 .feedback__title {
   .title();
-  margin: 0;
   padding-top: 61px;
+  margin: 0;
 }
 
 .feedback__newfeedback {
   .link-btn();
   margin: 0;
   margin-top: 38px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    width: initial;
+    margin-top: 82px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: -30px -50px;
+  }
+
+  .feedback__container {
+    display: flex;
+    width: 650px;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .feedback__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedback__newfeedback {
+    margin-top: 0;
+    width: 175px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    width: 940px;
+    background-position: -55px -20px;
+    min-height: 457px;
+  }
+
+  .feedback__container {
+    width: 855px;
+    padding-left: 130px;
+  }
+
+  .feedback__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback__newfeedback {
+    top: 65px;
+  }
 }
