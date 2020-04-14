@@ -1,4 +1,8 @@
 .category-list {
+  background-color: @lightgray;
+}
+
+.category-list__container {
   .list-reset();
   display: flex;
   flex-direction: column;
@@ -24,7 +28,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .category-list {
+  .category-list__container {
     flex-direction: row;
     justify-content: center;
     margin: 0 52px;
@@ -39,7 +43,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .category-list {
+  .category-list__container {
     margin: 0 50px;
   }
 

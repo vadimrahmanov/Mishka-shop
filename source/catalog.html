@@ -150,22 +150,13 @@
     <section class="modal-basket">
       <h2 class="modal-basket__title">Добавить в корзину</h2>
       <p class="modal-basket__description">Выберите размер:</p>
-      <form class="modal-basket__form" action="http://echo.htmlacademy.ru">
-        <label>
-          <input class="visually-hidden modal-basket__size-button" type="radio" name="size" value="S" checked>
-          <span class="modal-basket__form-input">S</span>
-          <span class="visually-hidden">Маленький</span>
-        </label>
-        <label>
-          <input class="visually-hidden modal-basket__size-button" type="radio" name="size" value="M">
-          <span class="modal-basket__form-input">M</span>
-          <span class="visually-hidden">Средний</span>
-        </label>
-        <label>
-          <input class="visually-hidden modal-basket__size-button" type="radio" name="size" value="L">
-          <span class="modal-basket__form-input">L</span>
-          <span class="visually-hidden">Большой</span>
-        </label>
+      <form class="modal-basket__form" action="http://echo.htmlacademy.ru" method="GET">
+        <input class="visually-hidden modal-basket__size-button" aria-label="Маленький" id="small" type="radio" name="size" value="S" checked>
+        <label class="modal-basket__form-input" for="small">S</label>
+        <input class="visually-hidden modal-basket__size-button" aria-label="Средний" id="medium" type="radio" name="size" value="M">
+        <label class="modal-basket__form-input" for="medium">M</label>
+        <input class="visually-hidden modal-basket__size-button" aria-label="Большой" id="large" type="radio" name="size" value="L">
+        <label class="modal-basket__form-input" for="large">L</label>
         <button class="modal-basket__add-order">Добавить</button>
       </form>
     </section>

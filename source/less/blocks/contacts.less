@@ -12,16 +12,22 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts {
-    background-image: url("../img/icon-flag.svg");
-    background-repeat: no-repeat;
-    background-position: 650px 80px;
-  }
-
   .contacts__title {
     font-size: 43px;
     line-height: 50px;
+    position: relative;
     width: 650px;
+
+    &::after {
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: -25px;
+      top: 70px;
+      width: 47px;
+      height: 81px;
+      content: "";
+    }
   }
 }
 
@@ -35,11 +41,16 @@
     font-size: 53px;
     line-height: 57px;
     width: 150px;
+
+    &::after {
+      right: 200px;
+    }
   }
 
   .contacts__container {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
   }
 
   .contacts__wrapper {
