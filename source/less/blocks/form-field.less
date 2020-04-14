@@ -19,6 +19,8 @@
 }
 
 .form-field__input {
+  outline-color: @lightgreen;
+
   &--checkbox {
     width: 40px;
     height: 39px;
@@ -32,7 +34,6 @@
   }
 
   &--text {
-    width: 260px;
     min-height: 52px;
     border: none;
     border-bottom: 2px solid @black;
@@ -82,7 +83,7 @@
       width: 207px;
     }
 
-    &--lfp {
+    &--fullname {
       padding-right: 25px;
     }
   }
@@ -103,12 +104,11 @@
   .form-field__input {
     &--text {
       font-size: inherit;
-      width: 428px;
+      width: 100%;
     }
 
     &--tel,
     &--email {
-      width: 501px;
       background-color: transparent;
     }
 
@@ -139,23 +139,7 @@
 
   .form-field {
     &--text {
-      width: initial;
-    }
-  }
-
-  .form-field__input {
-    &--name {
-      width: 626px;
-    }
-
-    &--surname,
-    &--patronymic {
-      width: 582px;
-    }
-
-    &--tel,
-    &--email {
-      width: 700px;
+      width: 100%;
     }
   }
 

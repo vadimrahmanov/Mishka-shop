@@ -1,4 +1,5 @@
 .production-process__container {
+  position: relative;
   border: 1px solid @border-gray;
   padding-bottom: 33px;
   width: 260px;
@@ -15,6 +16,19 @@
 
 .production-process__video {
   padding-top: 26px;
+}
+
+.production-process__video-button {
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 101px;
+  height: 77px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
 }
 
 .production-process__video-description {
@@ -58,6 +72,10 @@
     order: 1;
   }
 
+  .production-process__video-button {
+    top: 195px;
+  }
+
   .production-process__video-description {
     width: 581px;
     font-size: 15px;
@@ -93,6 +111,11 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .production-process__video-button {
+    transform: translate(0, 0);
+    left: 285px;
   }
 
   .production-process__video-description {
