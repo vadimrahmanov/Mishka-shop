@@ -1,5 +1,43 @@
+.form-field {
+  display: flex;
+
+  &--ticks {
+    align-items: center;
+  }
+
+  &--text {
+    flex-direction: column;
+  }
+}
+
 .form-field__label {
   line-height: 18px;
+
+  &--accessory {
+    width: 125px;
+  }
+}
+
+.form-field__input {
+  outline-color: @lightgreen;
+
+  &--checkbox {
+    width: 40px;
+    height: 39px;
+    margin-right: 24px;
+  }
+
+  &--radio {
+    width: 40px;
+    height: 40px;
+    margin-right: 22px;
+  }
+
+  &--text {
+    min-height: 52px;
+    border: none;
+    border-bottom: 2px solid @black;
+  }
 }
 
 .form-field__input::placeholder,
@@ -13,5 +51,99 @@
     font-size: 19px;
     line-height: 18px;
     color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.form-field__textarea {
+  font-family: inherit;
+  line-height: 18px;
+  box-sizing: border-box;
+  width: 260px;
+  min-height: 142px;
+  padding: 0;
+  margin: 0;
+  margin-top: 23px;
+  border: 2px solid @grayish;
+  resize: none;
+
+  &::placeholder {
+    text-align: center;
+    width: 200px;
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-field__label {
+    &--accessory {
+      width: initial;
+    }
+
+    &--childtoy {
+      width: 207px;
+    }
+
+    &--fullname {
+      padding-right: 25px;
+    }
+  }
+
+  .form-field {
+    &--colors {
+      width: 225px;
+    }
+
+    &--text {
+      flex-direction: row;
+      align-items: baseline;
+      box-sizing: border-box;
+      width: 465px;
+    }
+  }
+
+  .form-field__input {
+    &--text {
+      font-size: inherit;
+      width: 100%;
+    }
+
+    &--tel,
+    &--email {
+      background-color: transparent;
+    }
+
+    &--text::placeholder {
+      padding-left: 16px;
+    }
+  }
+
+  .form-field__textarea {
+    font-size: inherit;
+    width: 501px;
+
+    &::placeholder {
+      width: 400px;
+    }
+  }
+
+  .form-field__input::placeholder,
+  .form-field__textarea::placeholder {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-field__label {
+    font-size: 19px;
+  }
+
+  .form-field {
+    &--text {
+      width: 100%;
+    }
+  }
+
+  .form-field__textarea {
+    width: 700px;
   }
 }

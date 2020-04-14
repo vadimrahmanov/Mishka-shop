@@ -26,6 +26,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .header {
+    background: linear-gradient(to bottom, @white 0%, @white 65%, @darkgray 50%, @darkgray 100%);
+
+    &--index {
+      background: linear-gradient(to bottom, @white 0%, @white 65%, @lightgray 50%, @lightgray 100%);
+    }
+  }
+
   .header__logo {
     margin: initial;
     padding-left: 51px;

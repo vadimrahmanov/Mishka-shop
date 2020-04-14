@@ -1,8 +1,9 @@
 .social-list {
-  .list-reset;
+  .list-reset();
   display: flex;
   width: 140px;
   justify-content: space-around;
+  align-items: baseline;
 }
 
 .social-list__link {
@@ -25,7 +26,7 @@
     &::before {
       width: 22px;
       height: 21px;
-      background-image: url("/img/icon-insta.svg");
+      background-image: url("../img/icon-insta.svg");
     }
   }
 
@@ -36,7 +37,7 @@
     &::before {
       width: 15px;
       height: 28px;
-      background-image: url("/img/icon-fb.svg");
+      background-image: url("../img/icon-fb.svg");
     }
   }
 
@@ -47,7 +48,7 @@
     &::before {
       width: 23px;
       height: 20px;
-      background-image: url("/img/icon-twitter.svg");
+      background-image: url("../img/icon-twitter.svg");
     }
   }
 }

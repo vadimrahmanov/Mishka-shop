@@ -109,16 +109,20 @@
         </ul>
       </section>
       <section class="production-process">
-        <h2 class="production-process__title">Процесс производства</h2>
-        <div class="player">
-          <img class="player__video" src="https://via.placeholder.com/260x150" alt="Здесь будет видео">
-          <p class="player__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <div class="production-process__container">
+          <h2 class="production-process__title">Процесс производства</h2>
+          <img class="production-process__video" src="https://via.placeholder.com/260x150" alt="Здесь будет видео">
+          <button class="production-process__video-button">
+            <span class="visually-hidden">Запустить видео</span>
+          </button>
+          <p class="production-process__video-description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production-process__order-btn" href="">Сделать заказ</a>
         </div>
-        <a class="production-process__order-btn" href="">Сделать заказ</a>
       </section>
     </main>
     <footer class="footer">
-      <img class="footer__logo" src="img/mishka-logo.svg" width="102" height="34" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
+      <div class="footer__container">
+        <img class="footer__logo" src="img/mishka-logo.svg" width="102" height="34" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
       <ul class="social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--instagram" href="">
@@ -142,23 +146,21 @@
           <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
+      </div>
     </footer>
 
     <section class="modal-basket">
       <h2 class="modal-basket__title">Добавить в корзину</h2>
       <p class="modal-basket__description">Выберите размер:</p>
-      <ul class="size-list">
-        <li class="size-list__item">
-          <button class="size-list__button size-list__button--s" type="button">S</button>
-        </li>
-        <li class="size-list__item">
-          <button class="size-list__button size-list__button--m" type="button">M</button>
-        </li>
-        <li class="size-list__item">
-          <button class="size-list__button size-list__button--l" type="button">L</button>
-        </li>
-      </ul>
-      <button class="modal-basket__add-order" type="button">Добавить</button>
+      <form class="modal-basket__form" action="http://echo.htmlacademy.ru" method="GET">
+        <input class="visually-hidden modal-basket__size-button" aria-label="Маленький" id="small" type="radio" name="size" value="S" checked>
+        <label class="modal-basket__form-input" for="small">S</label>
+        <input class="visually-hidden modal-basket__size-button" aria-label="Средний" id="medium" type="radio" name="size" value="M">
+        <label class="modal-basket__form-input" for="medium">M</label>
+        <input class="visually-hidden modal-basket__size-button" aria-label="Большой" id="large" type="radio" name="size" value="L">
+        <label class="modal-basket__form-input" for="large">L</label>
+        <button class="modal-basket__add-order">Добавить</button>
+      </form>
     </section>
 
   </body>

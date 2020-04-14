@@ -1,6 +1,33 @@
+.write-us {
+  margin: 0 auto;
+}
+
 .write-us__link {
   .link-btn();
   margin: 0;
+  width: 260px;
   margin-top: 39px;
   margin-bottom: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .write-us__link {
+    font-size: inherit;
+    width: 230px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .write-us {
+    width: 235px;
+    position: relative;
+  }
+
+  .write-us__link {
+    box-sizing: border-box;
+    margin: 0;
+    position: absolute;
+    top: -52px;
+    left: -221px;
+  }
 }

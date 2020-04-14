@@ -1,0 +1,33 @@
+.feedback-paginator {
+  display: flex;
+}
+
+.feedback-paginator__button {
+  width: 130px;
+  min-height: 52px;
+  border: 1px solid @border-gray;
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--previous {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .feedback-paginator {
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    width: 175px;
+  }
+
+  .feedback-paginator__button {
+    border: none;
+  }
+}
