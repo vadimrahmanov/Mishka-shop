@@ -1,5 +1,7 @@
 .header {
   position: relative;
+  width: 303px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -14,8 +16,8 @@
   position: absolute;
   top: 32px;
   right: 32px;
-  width: 20px;
-  min-height: 14px;
+  background-color: transparent;
+  border: none;
 }
 
 .header__wrapper {
@@ -27,6 +29,7 @@
 
 @media (min-width: @tablet-width) {
   .header {
+    width: initial;
     background: linear-gradient(to bottom, @white 0%, @white 65%, @darkgray 50%, @darkgray 100%);
 
     &--index {
@@ -35,6 +38,7 @@
   }
 
   .header__logo {
+    text-align: left;
     margin: initial;
     padding-left: 51px;
     flex-grow: 1;
