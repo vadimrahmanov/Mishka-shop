@@ -13,6 +13,45 @@
 .form-field__label {
   line-height: 18px;
 
+  &--radio {
+    position: relative;
+    padding-left: 60px;
+    padding-top: 15px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @grayish;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: inset 0 0 0 12px #ffffff;
+      content: "";
+    }
+  }
+
+  &--checkbox {
+    position: relative;
+    padding-left: 60px;
+    padding-top: 15px;
+    margin-top: 22px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 39px;
+      border: 2px solid @grayish;
+      position: absolute;
+      content: "";
+    }
+  }
+
+  &--white {
+    margin-top: 0;
+  }
+
   &--accessory {
     width: 125px;
   }
@@ -21,22 +60,21 @@
 .form-field__input {
   outline-color: @lightgreen;
 
-  &--checkbox {
-    width: 40px;
-    height: 39px;
-    margin-right: 24px;
-  }
-
-  &--radio {
-    width: 40px;
-    height: 40px;
-    margin-right: 22px;
-  }
-
   &--text {
     min-height: 52px;
     border: none;
     border-bottom: 2px solid @black;
+  }
+
+  &:checked + .form-field__label--radio::before {
+    background-color: @lightgreen;
+  }
+
+  &--checkbox:checked + .form-field__label--checkbox::before {
+    background-image: url("../img/icon-tick.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px 16px;
   }
 }
 
@@ -75,16 +113,23 @@
 
 @media (min-width: @tablet-width) {
   .form-field__label {
+    font-size: 19px;
+
     &--accessory {
       width: initial;
     }
 
     &--childtoy {
-      width: 207px;
+      width: 233px;
     }
 
     &--fullname {
       padding-right: 25px;
+    }
+
+    &--checkbox {
+      margin-top: initial;
+      padding-top: 12px;
     }
   }
 

@@ -4,27 +4,31 @@
 }
 
 .main-nav__link {
+  color: @black;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -36px;
-    height: 18px;
-    opacity: 0.2;
-  }
 
   &--search {
     &::before {
-      background-image: url("../../img/icon-search.svg");
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -36px;
+      height: 18px;
+      opacity: 0.2;
+      background-image: url("../img/icon-search.svg");
       width: 18px;
     }
   }
 
   &--basket {
     &::before {
-      background-image: url("../../img/icon-cart.svg");
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -36px;
+      height: 18px;
+      opacity: 0.2;
+      background-image: url("../img/icon-cart.svg");
       width: 21px;
     }
   }
