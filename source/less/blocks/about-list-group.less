@@ -6,27 +6,76 @@
 
 .about-list-group__list-item {
   line-height: 20px;
+  position: relative;
   padding-top: 88px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 35px;
+    left: 0;
+  }
 
   &--flower {
     width: 175px;
+
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+      width: 32px;
+      height: 37px;
+      left: 8px;
+    }
   }
 
   &--banknote {
     width: 200px;
+
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+      width: 46px;
+      height: 27px;
+    }
   }
 
   &--heart {
     width: 185px;
+
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+      width: 33px;
+      height: 27px;
+      left: 8px;
+    }
   }
 
   &--ball {
     width: 240px;
+
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+      width: 35px;
+      height: 34px;
+    }
   }
 
-  &--gift,
   &--rocket {
     width: 230px;
+
+    &::before {
+      background-image: url("../img/icon-feature-rocket.svg");
+      width: 55px;
+      height: 23px;
+    }
+  }
+
+  &--gift {
+    width: 230px;
+
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 
@@ -42,6 +91,10 @@
   .about-list-group__list-item {
     font-size: 20px;
     line-height: 22px;
+
+    &::before {
+      top: 55px;
+    }
 
     &--rocket {
       width: 270px;
