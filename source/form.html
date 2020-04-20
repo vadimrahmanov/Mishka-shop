@@ -9,9 +9,9 @@
   <body>
     <header class="header">
       <button class="header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <img class="header__toggle-button" src="img/icon-menu-open.svg" alt="Открыть меню" width="20" height="14">
       </button>
-      <nav class="main-nav main-nav--form">
+      <nav class="main-nav">
         <a class="header__logo" href="index.html">
           <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
         </a>
@@ -43,8 +43,10 @@
       </nav>
     </header>
     <main>
-      <div class="banner banner--form">
-        <h1 class="banner__title banner__title--form">Вязание на заказ</h1>
+      <div class="banner__container">
+        <div class="banner banner--form">
+          <h1 class="banner__title banner__title--form">Вязание на заказ</h1>
+        </div>
       </div>
       <section class="form">
         <h2 class="visually-hidden">Форма заказа</h2>
@@ -52,14 +54,14 @@
           свяжемся с вами, чтобы уточнить детали.</p>
         <form class="order-form" action="https://echo.htmlacademy.ru">
           <fieldset class="form-group">
-            <div class="form-group__container">
-              <h3 class="form-group__title">Тип</h3>
-              <p class="form-field form-field--ticks">
+            <div class="form-group__container form-group__container--type">
+              <h3 class="form-group__title form-group__title--type">Тип</h3>
+              <p class="form-field form-field--ticks form-field--accessory">
                 <input class="visually-hidden form-field__input form-field__input--radio" id="accessory" type="radio" name="type"
                 value="interior-accessory" checked>
                 <label class="form-field__label form-field__label--radio form-field__label--accessory" for="accessory">Аксессуар для интерьера</label>
               </p>
-              <p class="form-field form-field--ticks">
+              <p class="form-field form-field--ticks form-field--childtoy">
                 <input class="visually-hidden form-field__input form-field__input--radio" id="childtoy" type="radio" name="type"
                 value="children-toy">
                 <label class="form-field__label form-field__label--radio form-field__label--childtoy" for="childtoy">Детская игрушка</label>
@@ -68,7 +70,7 @@
           </fieldset>
           <fieldset class="form-group">
             <div class="form-group__container form-group__container--colors">
-              <h3 class="form-group__title">Цвет</h3>
+              <h3 class="form-group__title form-group__title--colors">Цвет</h3>
               <p class="form-field form-field--ticks form-field--colors">
                 <input class="visually-hidden form-field__input form-field__input--checkbox" id="white" type="checkbox" name="color"
                   value="white" checked>
@@ -105,7 +107,7 @@
               </p>
               <p class="form-field form-field--text">
                 <label class="form-field__label form-field__label--fullname" for="surname">Фамилия:</label>
-                <input class="form-field__input form-field__input--text form-field__input--surname" id="surname" type="text" name="lastname" placeholder="Введите фамилию*" required>
+                <input class="form-field__input form-field__input--text form-field__input--surname" id="surname" type="text" name="lastname" placeholder="Укажите фамилию*" required>
               </p>
               <p class="form-field form-field--text">
                 <label class="form-field__label form-field__label--fullname" for="patronymic">Отчество:</label>
@@ -113,9 +115,9 @@
               </p>
             </div>
           </fieldset>
-          <fieldset class="form-group">
-            <div class="form-group__container form-group__container--text">
-              <p class="form-field form-field--text">
+          <fieldset class="form-group form-group--contacts">
+            <div class="form-group__container form-group__container--text form-group__container--contacts">
+              <p class="form-field form-field--text form-field--tel">
                 <label class="form-group__title form-group__title--tel form-group__title--text" for="telephone">Тел</label>
                 <input class="form-field__input form-field__input--text form-field__input--tel" id="telephone" aria-label="Поле для ввода телефона" type="tel" name="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               </p>
@@ -127,7 +129,7 @@
           </fieldset>
           <fieldset class="form-group">
             <div class="form-group__container form-group__container--text">
-              <p class="form-field form-field--text">
+              <p class="form-field form-field--text form-field--additional">
                 <label class="form-group__title form-group__title--additional form-group__title--text" for="additional-info">Доп</label>
                 <textarea class="form-field__textarea" id="additional-info" aria-label="Поле для ввода пожеланий к заказу" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </p>
@@ -170,5 +172,6 @@
       </div>
       </div>
     </footer>
+    <script src="js/navigation.js"></script>
   </body>
 </html>

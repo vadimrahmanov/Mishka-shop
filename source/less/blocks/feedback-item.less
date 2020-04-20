@@ -5,33 +5,37 @@
 .feedback-item__text {
   .small-text();
   line-height: 30px;
-  width: 256px;
+  width: 281px;
   margin: 0;
-  padding-top: 38px;
-  padding-bottom: 38px;
+  padding-top: 24px;
+  padding-left: 1px;
+  padding-bottom: 30px;
 }
 
 .feedback-item__name {
   font-style: normal;
   margin: 0;
+  padding-bottom: 3px;
 }
 
 .feedback-item__username {
   font-weight: 400;
   line-height: 30px;
   margin: 0;
-  padding-bottom: 36px;
+  padding-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .feedback-item__text {
     width: 645px;
+    padding-top: 49px;
+    padding-bottom: 60px;
     font-size: inherit;
   }
 
   .feedback-item__name {
     font-size: 18px;
-    width: 235px;
+    width: 255px;
   }
 
   .feedback-item__username {
@@ -42,6 +46,7 @@
 @media (min-width: @desktop-width) {
   .feedback-item__text {
     width: 800px;
+    padding-bottom: 41px;
   }
 
   .feedback-item__name {

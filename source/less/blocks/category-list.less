@@ -23,14 +23,12 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 29px;
+  padding-left: 22px;
   min-height: 103px;
   color: @white;
 
   &::after {
     position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
     opacity: 0.5;
     content: "";
   }
@@ -40,7 +38,8 @@
       background-image: url("../img/icon-interior.svg");
       width: 40px;
       height: 62px;
-      right: 35px;
+      right: 26px;
+      top: 24px;
     }
   }
 
@@ -49,7 +48,8 @@
       background-image: url("../img/icon-toy.svg");
       width: 60px;
       height: 60px;
-      right: 25px;
+      right: 18px;
+      top: 21px;
     }
   }
 }
@@ -62,22 +62,39 @@
   .category-list__container {
     flex-direction: row;
     justify-content: center;
-    width: 650px;
+    width: 684px;
     min-height: 119px;
     margin: 0 auto;
   }
 
   .category-list__item {
-    font-size: 20px;
-    line-height: 30px;
     width: 334px;
-    padding-left: 36px;
+
+    &--interior {
+      width: 333px;
+      margin-left: 17px;
+    }
   }
 
   .category-list__link {
     font-size: 20px;
     line-height: 30px;
-    min-height: 119px;
+    min-height: 115px;
+    padding-left: 35px;
+
+    &--interior {
+      &::after {
+        right: 36px;
+        top: 30px;
+      }
+    }
+
+    &--toys {
+      &::after {
+        right: 33px;
+        top: 31px;
+      }
+    }
   }
 }
 
@@ -95,10 +112,14 @@
   }
 
   .category-list__container {
-    width: 1035px;
+    width: 1050px;
   }
 
   .category-list__item {
     width: 525px;
+
+    &--interior {
+      margin-left: 0;
+    }
   }
 }

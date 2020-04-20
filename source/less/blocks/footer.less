@@ -10,7 +10,7 @@
   background-color: @darkgray;
   width: 320px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 22px;
 
   &--form {
     margin-top: 55px;
@@ -22,22 +22,32 @@
 }
 
 @media (min-width: @tablet-width) {
+  .footer {
+    margin-top: 17px;
+  }
+
   .footer__container {
     flex-direction: row;
     justify-content: space-around;
     box-sizing: border-box;
     width: 768px;
+    min-height: 143px;
     padding-bottom: 50px;
     padding-top: 45px;
   }
 
   .footer__logo {
     display: block;
+    padding-top: 2px;
+    padding-left: 12px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer__container {
     width: 1150px;
+    justify-content: space-between;
+    padding-right: 42px;
+    padding-left: 31px;
   }
 }
