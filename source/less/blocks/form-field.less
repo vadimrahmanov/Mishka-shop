@@ -27,6 +27,7 @@
   }
 
   &--radio {
+    min-height: 36px;
     position: relative;
     padding-left: 60px;
     padding-top: 15px;
@@ -45,8 +46,8 @@
   }
 
   &--childtoy {
-    padding-top: 26px;
     padding-left: 63px;
+    padding-top: 24px;
 
     &::before {
       top: 16px;
@@ -155,7 +156,6 @@
 
     &--radio {
       padding-left: 95px;
-      padding-top: 12px;
 
       &::before {
         top: -2px;
@@ -207,8 +207,9 @@
       padding-bottom: 26px;
     }
 
-    &--accessory {
-      margin-bottom: 49px;
+    &--radio {
+      margin-bottom: 29px;
+      min-height: 51px;
     }
 
     &--additional {
@@ -257,10 +258,6 @@
 
 @media (min-width: @desktop-width) {
   .form-field {
-    &--accessory {
-      margin-bottom: 46px;
-    }
-
     &--colors {
       margin-left: 0;
       width: 260px;
