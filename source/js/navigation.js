@@ -1,9 +1,13 @@
 var navigation = document.querySelector(".main-nav");
-var navList = document.querySelector(".main-nav__list");
+var navLists = document.querySelectorAll(".main-nav__list");
 var menuButton = document.querySelector(".header__toggle");
 
-navList.classList.add("main-nav-hidden");
+navLists.forEach(function(item) {
+  item.classList.add("main-nav-hidden");
+})
 
 menuButton.addEventListener("click", function () {
-  navList.classList.toggle("main-nav-hidden");
+  navLists.forEach(function (item) {
+    item.classList.toggle("main-nav-hidden");
+  })
 });
