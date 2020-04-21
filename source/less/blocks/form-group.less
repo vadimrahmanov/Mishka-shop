@@ -4,15 +4,93 @@
   padding: 0;
 }
 
+.form-group__container {
+  margin: 0;
+
+  &--type {
+    padding-bottom: 19px;
+  }
+}
+
 .form-group__title {
   font-size: inherit;
   line-height: 16px;
   text-transform: uppercase;
   color: @lightgreen;
-  padding-bottom: 10px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    content: "";
+    width: 198px;
+    height: 1px;
+    background-color: @lightgreen;
+  }
+
+  &--colors {
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 24px;
+
+    &::after {
+      top: 15px;
+    }
+  }
+
+  &--text {
+    margin: 0;
+    margin-top: 13px;
+    margin-bottom: 22px;
+  }
+
+  &--type {
+    &::after {
+      top: 8px;
+    }
+  }
+
+  &--tel {
+    margin-top: 14px;
+    margin-bottom: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 34px;
+      right: 7px;
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/icon-phone.svg");
+      opacity: 0.2;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
 
   &--email {
     padding-top: 15px;
+    margin-top: 0;
+    margin-bottom: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 49px;
+      right: 3px;
+      width: 32px;
+      height: 28px;
+      background-image: url("../img/icon-mail.svg");
+      opacity: 0.2;
+    }
+
+    &::after {
+      width: 179px;
+      top: 24px;
+    }
   }
 }
 
@@ -23,24 +101,45 @@
     &:nth-child(2n+2) {
       background-color: @darkgray;
     }
+
+    &--colors {
+      margin-top: 3px;
+    }
+
+    &--contacts {
+      margin-top: 23px;
+      padding-bottom: 24px;
+    }
   }
 
   .form-group__title {
     position: absolute;
-    top: 15px;
-    left: 0;
+    top: 5px;
+    left: 10px;
+
+    &::before {
+      position: initial;
+    }
+
+    &::after {
+      position: initial;
+    }
+
+    &--colors {
+      top: 61px;
+    }
 
     &--tel {
-      top: 35px;
+      top: 54px;
     }
 
     &--email {
-      top: 125px;
+      top: 144px;
       padding-top: 0;
     }
 
     &--additional {
-      top: 40px;
+      top: 6px;
     }
   }
 
@@ -53,39 +152,95 @@
     margin: 0 auto;
     box-sizing: border-box;
 
+    &--type {
+      padding-bottom: 19px;
+    }
+
     &--colors {
       flex-direction: row;
       flex-wrap: wrap;
-      padding-left: 155px;
+      padding-top: 50px;
+      padding-bottom: 22px;
+      padding-left: 131px;
       justify-content: center;
     }
 
     &--text {
-      padding-left: 175px;
+      padding-left: 183px;
+    }
+
+    &--contacts {
+      padding-top: 50px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 61px;
+        right: 18px;
+        width: 25px;
+        height: 24px;
+        background-image: url("../img/icon-phone.svg");
+        opacity: 0.2;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        bottom: 39px;
+        width: 32px;
+        height: 28px;
+        background-image: url("../img/icon-mail.svg");
+        opacity: 0.2;
+      }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form-group {
+    &--contacts {
+      margin-top: 23px;
+    }
+  }
+
   .form-group__container {
     align-items: flex-start;
-    width: 680px;
+    width: 728px;
 
     &--colors {
-      padding-left: 0;
+      width: 870px;
+      justify-content: flex-start;
+      padding-left: 87px;
     }
 
     &--text {
-      padding-left: 20px;
-      width: 705px;
+      padding-left: 5px;
+      width: 706px;
+    }
+
+    &--contacts {
+      &::before {
+        right: 10px;
+      }
+
+      &::after {
+        right: 6px;
+      }
     }
   }
 
   .form-group__title {
-    left: -85px;
+    left: -96px;
 
     &--text {
-      left: -70px;
+      left: -110px;
+    }
+
+    &--colors {
+      left: -30px;
+      top: 62px;
     }
   }
 }

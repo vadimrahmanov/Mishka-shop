@@ -43,8 +43,10 @@
       </nav>
     </header>
     <main>
-      <div class="banner banner--index">
-        <h1 class="banner__title">Милые штуки ручной<br>работы для дома</h1>
+      <div class="banner__container banner__container--index">
+        <div class="banner banner--index">
+          <h1 class="banner__title banner__title--index">Милые штуки ручной<br>работы для дома</h1>
+        </div>
       </div>
       <div class="category-list">
       <ul class="category-list__container">
@@ -91,8 +93,6 @@
             <li class="about-list-group__list-item about-list-group__list-item--flower">Экологически чистые материалы</li>
             <li class="about-list-group__list-item about-list-group__list-item--banknote">Скандинавский стиль по российской цене</li>
             <li class="about-list-group__list-item about-list-group__list-item--heart">Увеличивает лайки на фотографиях</li>
-          </ul>
-          <ul class="about-list-group__list">
             <li class="about-list-group__list-item about-list-group__list-item--ball">Связано вручную с любовью и умилением</li>
             <li class="about-list-group__list-item about-list-group__list-item--rocket">Поддержка отечественного производителя</li>
             <li class="about-list-group__list-item about-list-group__list-item--gift">Поставляется в подарочной упаковке</li>
@@ -103,7 +103,7 @@
         <div class="feedback__container">
           <h2 class="feedback__title">Отзывы</h2>
         <blockquote class="feedback-item">
-          <p class="feedback-item__text">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</p>
+          <p class="feedback-item__text">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</p>
           <p class="feedback-item__name">
             <cite class="feedback-item__name">Анастасия Красильникова</cite>
           </p>
@@ -128,7 +128,7 @@
               <table class="contacts-group__container">
                 <tbody>
                   <tr class="contacts-group__row">
-                    <td class="contacts-group__title">email:</td>
+                    <td class="contacts-group__title">e-mail:</td>
                     <td class="contacts-group__item contacts-group__item--email">
                       <a class="contacts-group__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
                     </td>
@@ -179,7 +179,7 @@
         </div>
       </footer>
 
-      <section class="modal-basket">
+      <section class="modal-basket modal-basket--hidden">
         <h2 class="modal-basket__title">Добавить в корзину</h2>
         <p class="modal-basket__description">Выберите размер:</p>
         <form class="modal-basket__form" action="http://echo.htmlacademy.ru" method="GET">
@@ -192,6 +192,6 @@
           <button class="modal-basket__add-order">Добавить</button>
         </form>
       </section>
-
+      <script src="js/navigation.js"></script>
     </body>
   </html>

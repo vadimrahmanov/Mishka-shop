@@ -7,13 +7,12 @@
 .about-list-group__list-item {
   line-height: 20px;
   position: relative;
-  padding-top: 88px;
+  padding-top: 84px;
 
   &::before {
     position: absolute;
     content: "";
-    top: 35px;
-    left: 0;
+    top: 31px;
   }
 
   &--flower {
@@ -23,7 +22,7 @@
       background-image: url("../img/icon-feature-flower.svg");
       width: 32px;
       height: 37px;
-      left: 8px;
+      left: 10px;
     }
   }
 
@@ -34,6 +33,7 @@
       background-image: url("../img/icon-feature-money.svg");
       width: 46px;
       height: 27px;
+      left: 1px;
     }
   }
 
@@ -44,27 +44,32 @@
       background-image: url("../img/icon-feature-heart.svg");
       width: 33px;
       height: 27px;
-      left: 8px;
+      left: 9px;
+      top: 35px;
     }
   }
 
   &--ball {
     width: 240px;
+    padding-top: 83px;
 
     &::before {
       background-image: url("../img/icon-feature-ball.svg");
-      width: 35px;
+      width: 34px;
       height: 34px;
+      left: 5px;
     }
   }
 
   &--rocket {
-    width: 230px;
+    width: 250px;
+    padding-top: 81px;
 
     &::before {
       background-image: url("../img/icon-feature-rocket.svg");
       width: 55px;
       height: 23px;
+      left: -4px;
     }
   }
 
@@ -75,6 +80,8 @@
       background-image: url("../img/icon-feature-gift.svg");
       width: 32px;
       height: 32px;
+      left: 5px;
+      top: 28px;
     }
   }
 }
@@ -85,49 +92,88 @@
   }
 
   .about-list-group__list {
-    width: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 629px;
+    padding-left: 4px;
+    justify-content: space-between;
   }
 
   .about-list-group__list-item {
     font-size: 20px;
     line-height: 22px;
 
-    &::before {
-      top: 55px;
+    &--ball {
+      width: 295px;
+      padding-top: 104px;
+      order: 2;
+
+      &::before {
+        left: 4px;
+        top: 54px;
+      }
     }
 
     &--rocket {
-      width: 270px;
+      width: 295px;
       padding-top: 113px;
+      order: 4;
+
+      &::before {
+        left: -5px;
+        top: 62px;
+      }
     }
 
     &--flower {
-      width: 185px;
+      width: 205px;
       padding-top: 104px;
+      order: 1;
+
+      &::before {
+        top: 50px;
+      }
     }
 
     &--banknote {
       width: 240px;
       padding-top: 112px;
+      order: 3;
+
+      &::before {
+        top: 60px;
+      }
     }
 
     &--heart {
-      width: 195px;
+      width: 215px;
       padding-top: 112px;
-    }
+      order: 5;
 
-    &--ball {
-      padding-top: 104px;
+      &::before {
+        top: 64px;
+      }
     }
 
     &--gift {
       padding-top: 113px;
+      width: 295px;
+      order: 6;
+
+      &::before {
+        left: 3px;
+        top: 59px;
+      }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .about-list-group {
+    width: 735px;
+  }
+
   .about-list-group__list {
-    width: 330px;
+    width: 646px;
   }
 }

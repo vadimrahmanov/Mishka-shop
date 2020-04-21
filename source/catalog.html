@@ -9,9 +9,9 @@
   <body>
     <header class="header">
       <button class="header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <img class="header__toggle-button" src="img/icon-menu-open.svg" alt="Открыть меню" width="20" height="14">
       </button>
-      <nav class="main-nav main-nav--catalog">
+      <nav class="main-nav">
         <a class="header__logo" href="index.html">
           <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип интернет-магазина &laquo;Мишка&raquo;">
         </a>
@@ -43,8 +43,10 @@
       </nav>
     </header>
     <main>
-      <div class="banner banner--catalog">
-        <h1 class="banner__title banner__title--catalog">Каталог товаров</h1>
+      <div class="banner__container">
+        <div class="banner banner--catalog">
+          <h1 class="banner__title banner__title--catalog">Каталог товаров</h1>
+        </div>
       </div>
       <section class="catalog">
         <h2 class="catalog__title visually-hidden">Наш ассортимент</h2>
@@ -153,7 +155,7 @@
       </div>
     </footer>
 
-    <section class="modal-basket">
+    <section class="modal-basket modal-basket--hidden">
       <h2 class="modal-basket__title">Добавить в корзину</h2>
       <p class="modal-basket__description">Выберите размер:</p>
       <form class="modal-basket__form" action="http://echo.htmlacademy.ru" method="GET">
@@ -166,6 +168,6 @@
         <button class="modal-basket__add-order">Добавить</button>
       </form>
     </section>
-
+    <script src="js/navigation.js"></script>
   </body>
 </html>

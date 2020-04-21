@@ -6,10 +6,10 @@
   font-size: 13px;
   font-weight: 400;
   color: @grayish;
-  width: 260px;
+  width: 258px;
   margin: 0 auto;
-  padding-top: 29px;
-  padding-bottom: 29px;
+  padding-top: 24px;
+  padding-bottom: 6px;
 }
 
 .form__hint {
@@ -22,19 +22,24 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    margin-bottom: 51px;
+  }
+
   .form__description {
     font-size: inherit;
     line-height: 30px;
-    width: 670px;
+    padding-top: 76px;
+    width: 653px;
   }
 
   .form__wrap {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
-    padding-top: 53px;
-    width: 740px;
+    padding-top: 50px;
+    width: 685px;
     margin: 0 auto;
   }
 
@@ -47,12 +52,14 @@
 
 @media (min-width: @desktop-width) {
   .form__description {
-    width: 672px;
+    width: 697px;
+    padding-top: 155px;
   }
 
   .form__wrap {
     width: 700px;
-    padding-left: 35px;
+    padding-left: 6px;
+    padding-top: 45px;
     justify-content: space-between;
   }
 }

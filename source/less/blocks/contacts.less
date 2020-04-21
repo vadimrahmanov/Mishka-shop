@@ -7,8 +7,8 @@
   font-size: 18px;
   line-height: 30px;
   margin: 0 auto;
-  width: 250px;
-  padding-top: 96px;
+  width: 262px;
+  padding-top: 86px;
 }
 
 @media (min-width: @tablet-width) {
@@ -16,14 +16,15 @@
     font-size: 43px;
     line-height: 50px;
     position: relative;
-    width: 650px;
+    padding-top: 147px;
+    width: 659px;
 
     &::after {
       background-image: url("../img/icon-flag.svg");
       background-repeat: no-repeat;
       position: absolute;
-      right: -25px;
-      top: 70px;
+      right: -10px;
+      top: 130px;
       width: 47px;
       height: 81px;
       content: "";
@@ -33,17 +34,22 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    margin-bottom: 105px;
-    background-position: 125px 80px;
+    margin-bottom: 90px;
+  }
+
+  .contacts__wrapper {
+    width: 524px;
   }
 
   .contacts__title {
     font-size: 53px;
     line-height: 57px;
-    width: 150px;
+    padding-top: 231px;
+    width: 184px;
 
     &::after {
-      right: 200px;
+      right: 244px;
+      top: 222px;
     }
   }
 
@@ -51,9 +57,5 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-  }
-
-  .contacts__wrapper {
-    width: 510px;
   }
 }
