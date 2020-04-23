@@ -7,14 +7,15 @@
   color: @black;
   position: relative;
   min-height: 25px;
+  padding-left: 67px;
   display: block;
 
   &--search {
     &::before {
       content: "";
       position: absolute;
-      top: 5px;
-      left: -42px;
+      top: 3px;
+      left: 25px;
       height: 17px;
       opacity: 0.2;
       background-image: url("../img/icon-search.svg");
@@ -26,8 +27,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 5px;
-      left: -44px;
+      top: 0;
+      left: 23px;
       height: 19px;
       opacity: 0.2;
       background-image: url("../img/icon-cart.svg");
@@ -47,7 +48,6 @@
 .main-nav__list-item {
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-left: 67px;
   border-top: 1px solid @border-gray;
 
   &--basket {
@@ -131,12 +131,14 @@
     font-weight: 400;
     display: block;
     margin: 0;
-    padding-top: 24px;
+    padding-top: 20px;
     padding-right: 33px;
     order: 3;
   }
 
   .main-nav__link {
+    padding-left: 0;
+
     &--search {
       visibility: hidden;
 
@@ -148,6 +150,8 @@
     }
 
     &--basket {
+      padding-left: 55px;
+
       &::before {
         left: 33px;
         top: 5px;
