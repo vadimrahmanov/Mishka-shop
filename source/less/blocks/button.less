@@ -1,17 +1,21 @@
 .button {
   font-size: inherit;
+  font-weight: inherit;
   line-height: 20px;
   text-transform: uppercase;
   color: @grayish;
   width: 259px;
-  min-height: 52px;
+  padding-top: 14px;
+  padding-bottom: 13px;
   background-color: @white;
   border: 2px solid #444444;
   cursor: pointer;
 
   &--catalog-buy {
     width: 20px;
-    min-height: 19px;
+    min-height: 18px;
+    padding-top: 0px;
+    padding-bottom: 0;
     opacity: 0.2;
     background-image: url("../img/icon-cart.svg");
     border: none;
@@ -29,7 +33,6 @@
 
     &--catalog-buy {
       width: 20px;
-      min-height: 19px;
     }
 
     &--form {

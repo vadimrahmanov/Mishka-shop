@@ -3,6 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  width: 303px;
+  justify-content: center;
 }
 
 .social-list__item {
@@ -14,8 +16,6 @@
 .social-list__link {
   display: block;
   position: relative;
-  width: auto;
-  height: auto;
 
   &::before {
     position: absolute;
@@ -61,5 +61,6 @@
 @media (min-width: @tablet-width) {
   .social-list {
     padding-left: 81px;
+    padding-top: 12px;
   }
 }
