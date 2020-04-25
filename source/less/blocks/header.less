@@ -30,10 +30,10 @@
 @media (min-width: @tablet-width) {
   .header {
     width: initial;
-    background: linear-gradient(to bottom, @white 0%, @white 65%, @darkgray 50%, @darkgray 100%);
+    background: linear-gradient(to bottom, @white 0%, @white 66%, @border-gray 67%, @darkgray 65%);
 
     &--index {
-      background: linear-gradient(to bottom, @white 0%, @white 65%, @lightgray 50%, @lightgray 100%);
+      background: linear-gradient(to bottom, @white 0%, @white 66%, @border-gray 67%, @lightgray 65%);
     }
   }
 
@@ -60,6 +60,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .header {
+    background: linear-gradient(to bottom, @white 0%, @white 66%, @border-gray 68%, @darkgray 65%);
+
+    &--index {
+      background: linear-gradient(to bottom, @white 0%, @white 66%, @border-gray 68%, @lightgray 65%);
+    }
+  }
+
   .header__logo {
     text-align: center;
     order: 3;
