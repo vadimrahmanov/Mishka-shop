@@ -1,0 +1,45 @@
+.break-line {
+  border: none;
+  margin: 0;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: 319px;
+  height: 6px;
+}
+
+.break-line {
+  &--about {
+    margin-top: 27px;
+  }
+
+  &--contacts {
+    margin-top: 34px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .break-line {
+    background-size: 770px;
+    height: 15px;
+
+    &--about {
+      margin-top: 42px;
+    }
+
+    &--contacts {
+      margin-top: 55px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .break-line {
+    background-size: initial;
+    height: 23px;
+
+    &--about {
+      width: 1050px;
+      margin: 0 auto;
+      margin-top: 63px;
+    }
+  }
+}
