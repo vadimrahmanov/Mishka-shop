@@ -1,6 +1,19 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  margin-top: 41px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: 0;
+    width: 303px;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 319px;
+  }
 }
 
 .contacts__title {
