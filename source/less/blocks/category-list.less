@@ -55,12 +55,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .category-list__container {
-    flex-direction: row;
-    justify-content: center;
-    width: 750px;
-    min-height: 119px;
-    margin: 0 auto;
+  .category-list {
     position: relative;
 
     &::after {
@@ -68,11 +63,19 @@
       content: "";
       bottom: -2px;
       left: -8px;
-      width: 765px;
+      width: 100%;
       height: 15px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-size: 770px;
     }
+  }
+
+  .category-list__container {
+    flex-direction: row;
+    justify-content: center;
+    width: 750px;
+    min-height: 119px;
+    margin: 0 auto;
   }
 
   .category-list__item {
@@ -109,16 +112,17 @@
 }
 
 @media (min-width: @desktop-width) {
-  .category-list__container {
-    width: 1050px;
-
+  .category-list {
     &::after {
       bottom: -17px;
-      left: -47px;
-      width: 1139px;
-      background-size: initial;
+      left: 0;
       height: 34px;
+      background-size: initial;
     }
+  }
+
+  .category-list__container {
+    width: 1050px;
   }
 
   .category-list__item {
