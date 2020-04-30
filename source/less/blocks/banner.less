@@ -41,6 +41,7 @@
     line-height: 50px;
     width: 765px;
     padding-top: 121px;
+    position: relative;
 
     &--index {
       padding-top: 110px;
@@ -52,6 +53,17 @@
       padding-top: 52px;
       padding-left: 17px;
       margin: 0 auto;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -72px;
+        left: 0;
+        width: 751px;
+        height: 24px;
+        background-image: url("../img/bg-zigzag-fill.svg");
+        background-size: 770px;
+      }
     }
   }
 
@@ -68,15 +80,6 @@
         background-image: url("../img/hero-tablet@2x.jpg");
         background-size: 1150px auto;
       }
-    }
-
-    &--catalog {
-      margin: 0 auto;
-      margin-bottom: 83px;
-    }
-
-    &--form {
-      margin: 0 auto;
     }
   }
 }
@@ -98,8 +101,9 @@
       }
     }
 
-    &--catalog {
-      margin-bottom: 161px;
+    &--catalog,
+    &--form {
+      min-height: 209px;
     }
   }
 
@@ -107,5 +111,13 @@
     font-size: 53px;
     line-height: 57px;
     padding-left: 0;
+
+    &::after {
+      bottom: -99px;
+      left: -185px;
+      width: 1141px;
+      background-size: initial;
+      height: 34px;
+    }
   }
 }

@@ -11,28 +11,20 @@
   display: block;
 
   &--search {
-    &::before {
-      content: "";
+    &-icon {
       position: absolute;
       top: 3px;
       left: 25px;
-      height: 17px;
       opacity: 0.2;
-      background-image: url("../img/icon-search.svg");
-      width: 17px;
     }
   }
 
   &--basket {
-    &::before {
-      content: "";
+    &-icon {
       position: absolute;
       top: 0;
       left: 23px;
-      height: 19px;
       opacity: 0.2;
-      background-image: url("../img/icon-cart.svg");
-      width: 21px;
     }
   }
 }
@@ -77,12 +69,12 @@
     &--catalog-and-order {
       font-size: 15px;
       order: 3;
-      padding-left: 47px;
-      padding-top: 20px;
+      padding-left: 39px;
+      padding-top: 19px;
     }
 
     &--search-and-basket {
-      padding-right: 33px;
+      padding-right: 42px;
       order: 2;
       background-color: @white;
     }
@@ -127,8 +119,8 @@
     font-weight: 400;
     display: block;
     margin: 0;
-    padding-top: 20px;
-    padding-right: 33px;
+    padding-top: 17px;
+    padding-right: 42px;
     order: 3;
   }
 
@@ -138,19 +130,19 @@
     &--search {
       visibility: hidden;
 
-      &::before {
+      &-icon {
         visibility: visible;
-        left: 32px;
-        top: 19px;
+        top: 17px;
+        left: 33px;
       }
     }
 
     &--basket {
       padding-left: 55px;
 
-      &::before {
+      &-icon {
+        top: 2px;
         left: 33px;
-        top: 5px;
       }
     }
   }
@@ -189,14 +181,16 @@
       width: 150px;
       text-align: left;
       border-right: 1px solid @border-gray;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 32px;
+      padding-bottom: 32px;
       padding-right: 35px;
     }
 
     &--order {
       width: 185px;
       text-align: right;
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
 
     &--newstaff {
