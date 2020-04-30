@@ -36,37 +36,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .banner__title {
-    font-size: 43px;
-    line-height: 50px;
-    width: 765px;
-    padding-top: 121px;
-    position: relative;
-
-    &--index {
-      padding-top: 110px;
-    }
-
-    &--catalog,
-    &--form {
-      width: 765px;
-      padding-top: 52px;
-      padding-left: 17px;
-      margin: 0 auto;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -72px;
-        left: 0;
-        width: 751px;
-        height: 24px;
-        background-image: url("../img/bg-zigzag-fill.svg");
-        background-size: 770px;
-      }
-    }
-  }
-
   .banner {
     align-items: flex-start;
     border-top: none;
@@ -81,15 +50,45 @@
         background-size: 1150px auto;
       }
     }
+
+    &--catalog,
+    &--form {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        width: 100%;
+        height: 24px;
+        background-image: url("../img/bg-zigzag-fill.svg");
+        background-size: 770px;
+      }
+    }
+  }
+
+  .banner__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: 765px;
+    padding-top: 121px;
+
+    &--index {
+      padding-top: 110px;
+    }
+
+    &--catalog,
+    &--form {
+      width: 765px;
+      padding-top: 52px;
+      margin: 0 auto;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .banner {
-    &::before {
-      top: -44px;
-    }
-
     &--index {
       background-image: url("../img/hero-desktop@1x.jpg");
       background-color: @lightgray;
@@ -104,6 +103,13 @@
     &--catalog,
     &--form {
       min-height: 209px;
+
+      &::after {
+        bottom: -20px;
+        left: 0;
+        background-size: initial;
+        height: 34px;
+      }
     }
   }
 
@@ -111,13 +117,5 @@
     font-size: 53px;
     line-height: 57px;
     padding-left: 0;
-
-    &::after {
-      bottom: -99px;
-      left: -185px;
-      width: 1141px;
-      background-size: initial;
-      height: 34px;
-    }
   }
 }
