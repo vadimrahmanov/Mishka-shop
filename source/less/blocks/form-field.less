@@ -105,6 +105,24 @@
     min-height: 46px;
   }
 
+  &--tel {
+    &-icon {
+      position: absolute;
+      top: 47px;
+      right: 7px;
+      opacity: 0.2;
+    }
+  }
+
+  &--email {
+    &-icon {
+      position: absolute;
+      top: 155px;
+      right: 3px;
+      opacity: 0.2;
+    }
+  }
+
   &:checked + .form-field__label--radio::before {
     background-color: @lightgreen;
   }
@@ -192,10 +210,14 @@
   }
 
   .form-field {
+    &--ticks {
+      width: 365px;
+    }
+
     &--colors {
-      width: 225px;
-      margin-bottom: 15px;
-      margin-left: 37px;
+      width: 234px;
+      margin-bottom: 14px;
+      margin-left: 30px;
     }
 
     &--text {
@@ -228,8 +250,20 @@
       background-color: transparent;
     }
 
+    &--tel {
+      &-icon {
+        top: 62px;
+        right: 28px;
+      }
+    }
+
     &--email {
       min-height: 46px;
+
+      &-icon {
+        top: 138px;
+        right: 23px;
+      }
     }
 
     &--text::placeholder {
@@ -270,6 +304,20 @@
 
   .form-field__label {
     font-size: 19px;
+  }
+
+  .form-field__input {
+    &--tel {
+      &-icon {
+        right: 11px;
+      }
+    }
+
+    &--email {
+      &-icon {
+        right: 6px;
+      }
+    }
   }
 
   .form-field__textarea {
