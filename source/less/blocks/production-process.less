@@ -59,6 +59,16 @@
   line-height: 16px;
   width: 192px;
   margin: 0 auto;
+  padding-bottom: 16px;
+
+  &:hover {
+    color: @white;
+    background-color: @grayish;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -130,6 +140,14 @@
     display: block;
     box-sizing: content-box;
     width: 1048px;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .production-process__title {
@@ -155,6 +173,15 @@
     transform: translate(0, 0);
     left: 291px;
     top: 189px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
   }
 
   .production-process__video-description {

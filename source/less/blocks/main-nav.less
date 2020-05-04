@@ -10,12 +10,29 @@
   padding-left: 67px;
   display: block;
 
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   &--search {
     &-icon {
       position: absolute;
       top: 3px;
       left: 25px;
       opacity: 0.2;
+    }
+
+    &:hover &-icon {
+      fill: @lightgreen;
+      opacity: 1;
+    }
+
+    &:active &-icon {
+      opacity: 0.3;
     }
   }
 
@@ -25,6 +42,27 @@
       top: 0;
       left: 23px;
       opacity: 0.2;
+    }
+
+    &:hover &-icon {
+      fill: @lightgreen;
+      opacity: 1;
+    }
+
+    &:active &-icon {
+      opacity: 0.3;
+    }
+  }
+
+  &--current {
+    color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
     }
   }
 }
