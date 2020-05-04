@@ -140,24 +140,6 @@
     min-height: 46px;
   }
 
-  &--tel {
-    &-icon {
-      position: absolute;
-      top: 47px;
-      right: 7px;
-      opacity: 0.2;
-    }
-  }
-
-  &--email {
-    &-icon {
-      position: absolute;
-      top: 155px;
-      right: 3px;
-      opacity: 0.2;
-    }
-  }
-
   &:checked + .form-field__label--radio::before {
     background-color: @lightgreen;
   }
@@ -168,6 +150,20 @@
     background-repeat: no-repeat;
     background-size: 22px 16px;
   }
+}
+
+.form-field__tel-icon {
+  position: absolute;
+  top: 47px;
+  right: 7px;
+  opacity: 0.2;
+}
+
+.form-field__email-icon {
+  position: absolute;
+  top: 155px;
+  right: 3px;
+  opacity: 0.2;
 }
 
 .form-field__input::placeholder,
@@ -300,25 +296,23 @@ input[type="checkbox"]:focus ~ .form-field__label::before {
       background-color: transparent;
     }
 
-    &--tel {
-      &-icon {
-        top: 62px;
-        right: 28px;
-      }
-    }
-
     &--email {
       min-height: 46px;
-
-      &-icon {
-        top: 138px;
-        right: 23px;
-      }
     }
 
     &--checkbox:checked + .form-field__label--checkbox::before {
       background-size: 40px 23px;
     }
+  }
+
+  .form-field__tel-icon {
+    top: 62px;
+    right: 28px;
+  }
+
+  .form-field__email-icon {
+    top: 138px;
+    right: 23px;
   }
 
   .form-field__textarea {
@@ -335,10 +329,10 @@ input[type="checkbox"]:focus ~ .form-field__label::before {
     font-size: 19px;
   }
 
-  .form-field__input--tel:hover + .form-field__input--tel-icon,
-  .form-field__input--email:hover + .form-field__input--email-icon,
-  .form-field__input--tel:focus + .form-field__input--tel-icon,
-  .form-field__input--email:focus + .form-field__input--email-icon {
+  .form-field__input--tel:hover + .form-field__tel-icon,
+  .form-field__input--email:hover + .form-field__email-icon,
+  .form-field__input--tel:focus + .form-field__tel-icon,
+  .form-field__input--email:focus + .form-field__email-icon {
     fill: @lightgreen;
     opacity: 1;
   }
@@ -360,18 +354,12 @@ input[type="checkbox"]:focus ~ .form-field__label::before {
     font-size: 19px;
   }
 
-  .form-field__input {
-    &--tel {
-      &-icon {
-        right: 11px;
-      }
-    }
+  .form-field__tel-icon {
+    right: 11px;
+  }
 
-    &--email {
-      &-icon {
-        right: 6px;
-      }
-    }
+  .form-field__email-icon {
+    right: 6px;
   }
 
   .form-field__textarea {

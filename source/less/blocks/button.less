@@ -31,16 +31,6 @@
       background-color: transparent;
       opacity: 1;
     }
-
-    &-icon {
-      &:hover {
-        fill: @lightgreen;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-    }
   }
 
   &--form {
@@ -55,6 +45,16 @@
     &:active {
       color: rgba(255, 255, 255, 0.3);
     }
+  }
+}
+
+.button__basket-btn {
+  &:hover {
+    fill: @lightgreen;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -77,11 +77,9 @@
     &--form {
       margin-left: 0;
     }
+  }
 
-    &--catalog-buy {
-      &-icon {
-        padding-top: 6px;
-      }
-    }
+  .button__basket-btn {
+    padding-top: 6px;
   }
 }
