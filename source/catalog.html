@@ -8,8 +8,9 @@
   </head>
   <body>
     <header class="header">
-      <button class="header__toggle" type="button">
-        <img class="header__toggle-button" src="img/icon-menu-open.svg" alt="Открыть меню" width="20" height="14">
+      <button class="header__toggle header__toggle--hidden" type="button"> <!-- Класс, который скрывает кнопку при выключенном JS -->
+        <img class="header__toggle-button" src="img/icon-menu-open.svg" alt="Открыть меню" width="20" height="14"> <!--Кнопка закрытого меню-->
+        <img class="header__toggle-close header__toggle--hidden" src="img/icon-menu-close.svg" alt="Закрыть меню" width="20.514" height="20.512"> <!--Кнопка, когда меню открыто-->
       </button>
       <nav class="main-nav">
         <a class="header__logo" href="index.html">
