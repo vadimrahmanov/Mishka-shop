@@ -11,16 +11,50 @@
   border: 2px solid #444444;
   cursor: pointer;
 
+  &:hover {
+    color: @white;
+    background-color: @grayish;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--catalog-buy {
     width: 20.3px;
+    height: 18px;
     padding: 0;
     opacity: 0.2;
     border: none;
+
+    &:hover {
+      background-color: transparent;
+      opacity: 1;
+    }
   }
 
   &--form {
     width: 260px;
     line-height: 16px;
+
+    &:hover {
+      color: @white;
+      background-color: @grayish;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.button__basket-btn {
+  &:hover {
+    fill: @lightgreen;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -43,11 +77,9 @@
     &--form {
       margin-left: 0;
     }
+  }
 
-    &--catalog-buy {
-      &-icon {
-        padding-top: 6px;
-      }
-    }
+  .button__basket-btn {
+    padding-top: 6px;
   }
 }

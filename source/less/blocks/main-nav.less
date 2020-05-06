@@ -10,23 +10,50 @@
   padding-left: 67px;
   display: block;
 
-  &--search {
-    &-icon {
-      position: absolute;
-      top: 3px;
-      left: 25px;
-      opacity: 0.2;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &--current {
+    color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
     }
   }
 
-  &--basket {
-    &-icon {
-      position: absolute;
-      top: 0;
-      left: 23px;
-      opacity: 0.2;
-    }
+  &--search:hover .main-nav__search-icon,
+  &--basket:hover .main-nav__basket-icon {
+    fill: @lightgreen;
+    opacity: 1;
   }
+
+  &--search:active .main-nav__search-icon,
+  &--basket:active .main-nav__basket-icon {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__search-icon {
+  position: absolute;
+  top: 3px;
+  left: 25px;
+  opacity: 0.2;
+}
+
+.main-nav__basket-icon {
+  position: absolute;
+  top: 0;
+  left: 23px;
+  opacity: 0.2;
 }
 
 .main-nav__list {
@@ -129,22 +156,22 @@
 
     &--search {
       visibility: hidden;
-
-      &-icon {
-        visibility: visible;
-        top: 17px;
-        left: 33px;
-      }
     }
 
     &--basket {
       padding-left: 55px;
-
-      &-icon {
-        top: 2px;
-        left: 33px;
-      }
     }
+  }
+
+  .main-nav__basket-icon {
+    top: 2px;
+    left: 33px;
+  }
+
+  .main-nav__search-icon {
+    visibility: visible;
+    top: 17px;
+    left: 33px;
   }
 }
 
