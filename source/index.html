@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин &laquo;Мишка&raquo;</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body>
     <header class="header header--index">
@@ -93,7 +94,7 @@
         </table>
         <div class="week-offer-order">
           <p class="week-offer-order__price">Цена: 990 руб.</p>
-          <button class="button" type="button">Заказать</button>
+          <button class="button button--week-offer" type="button">Заказать</button>
         </div>
         <picture class="week-offer-info__image-container">
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
@@ -224,22 +225,24 @@
         </div>
       </footer>
 
-      <section class="modal-basket modal-basket--hidden">
-        <h2 class="modal-basket__title">Добавить в корзину</h2>
-        <p class="modal-basket__description">Выберите размер:</p>
-        <form class="modal-basket__form" action="http://echo.htmlacademy.ru" method="GET">
-          <input class="visually-hidden modal-basket__size-button" aria-label="Маленький" id="small" type="radio" name="size" value="S" checked>
-          <label class="modal-basket__form-input" for="small">S</label>
-          <input class="visually-hidden modal-basket__size-button" aria-label="Средний" id="medium" type="radio" name="size" value="M">
-          <label class="modal-basket__form-input" for="medium">M</label>
-          <input class="visually-hidden modal-basket__size-button" aria-label="Большой" id="large" type="radio" name="size" value="L">
-          <label class="modal-basket__form-input" for="large">L</label>
-          <button class="modal-basket__add-order">Добавить</button>
-        </form>
-      </section>
+      <div class="modal">
+        <section class="modal__window">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__description">Выберите размер:</p>
+          <form class="modal__form" action="http://echo.htmlacademy.ru" method="GET">
+            <input class="visually-hidden modal__size-button" aria-label="Маленький" id="small" type="radio" name="size" value="S" checked>
+            <label class="modal__form-input" for="small">S</label>
+            <input class="visually-hidden modal__size-button" aria-label="Средний" id="medium" type="radio" name="size" value="M">
+            <label class="modal__form-input" for="medium">M</label>
+            <input class="visually-hidden modal__size-button" aria-label="Большой" id="large" type="radio" name="size" value="L">
+            <label class="modal__form-input" for="large">L</label>
+            <button class="modal__add-order">Добавить</button>
+          </form>
+        </section>
+      </div>
       <script src="js/svg4everybody.min.js"></script>
       <script>svg4everybody();</script>
       <script src="js/picturefill.min.js" async></script>
-      <script src="js/scripts.js"></script>
+      <script src="js/scripts.min.js"></script>
     </body>
   </html>
