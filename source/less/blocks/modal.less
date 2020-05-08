@@ -59,11 +59,6 @@
   outline-color: @lightgreen;
 }
 
-.modal__size-button:hover + .modal__form-input {
-  border-color: fade(@grayish, 30%);
-  outline-color: transparent;
-}
-
 .modal__size-button:active + .modal__form-input {
   border-color: @lightgreen;
 }
@@ -103,6 +98,11 @@
     width: 355px;
     font-size: 30px;
     line-height: 57px;
+  }
+
+  .modal__size-button:hover + .modal__form-input {
+    border-color: fade(@grayish, 30%);
+    outline-color: transparent;
   }
 
   .modal__description {
