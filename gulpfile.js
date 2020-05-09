@@ -42,17 +42,17 @@ gulp.task("html", function () {
     collapseWhitespace: true
   }))
   .pipe(gulp.dest("build"));
-  });
+});
 
   // JavaScript
 
-  gulp.task("script", function () {
-    return gulp.src("./source/js/*.js")
-      .pipe(concat("scripts.js"))
-      .pipe(uglify())
-      .pipe(rename("scripts.min.js"))
-      .pipe(gulp.dest("build/js"));
-  });
+gulp.task("script", function () {
+  return gulp.src("./source/js/*.js")
+    .pipe(concat("scripts.js"))
+    .pipe(uglify())
+    .pipe(rename("scripts.min.js"))
+    .pipe(gulp.dest("build/js"));
+});
 
 // Images optimization
 
@@ -64,32 +64,32 @@ gulp.task("images", function () {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"));
-  });
+});
 
 // WebP
 
-  gulp.task("webp", function () {
-    return gulp.src("source/img/**/*.{png,jpg}")
-      .pipe(webp({quality: 90}))
-      .pipe(gulp.dest("source/img"));
-  });
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+});
 
 // SVG Sprite
 
-  gulp.task("sprite", function () {
-    return gulp.src("source/img/*.svg")
-      .pipe(svgstore({
-        inlineSvg: true
-      }))
-      .pipe(rename("sprite.svg"))
-      .pipe(gulp.dest("build/img"));
-    });
+gulp.task("sprite", function () {
+  return gulp.src("source/img/*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+});
 
 // Build cleaner
 
 gulp.task("clean", function () {
   return del("build");
-  });
+});
 
 // Copy to build
 
@@ -115,20 +115,20 @@ gulp.task("server", function () {
     open: true,
     cors: true,
     ui: false
-  });
+});
 
   gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/img/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("script", "refresh"));
-  });
+});
 
   // Refresh
 
-  gulp.task("refresh", function (done) {
-    server.reload();
-    done();
-    });
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "script"));
 gulp.task("start", gulp.series("build", "server"));

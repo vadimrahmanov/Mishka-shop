@@ -127,6 +127,12 @@
 
   .category-list__item {
     width: 525px;
+    transition-duration: 0.2s;
+
+    &:hover {
+      min-height: 110px;
+      transform: translateY(-5px);
+    }
 
     &--interior {
       margin-left: 0;
@@ -138,12 +144,17 @@
     align-items: initial;
 
     &:hover {
-      min-height: 110px;
-      transform: translateY(-5px);
+      &::after {
+        transition-duration: 0.3s;
+        opacity: 1;
+      }
     }
 
     &:active {
       color: rgba(255, 255, 255, 0.3);
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 }
