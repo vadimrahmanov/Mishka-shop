@@ -16,7 +16,7 @@
 }
 
 .contacts-group__title {
-  padding-right: 29px;
+  padding-right: 26px;
 }
 
 .contacts-group__email-link {
@@ -49,7 +49,7 @@
 .contacts-group__item {
   &--email {
     color: @grayish;
-    padding-bottom: 31px;
+    padding-bottom: 29px;
   }
 
   &--address {
@@ -73,14 +73,15 @@
   }
 
   .contacts-group__title {
-    padding-right: 26px;
+    padding-right: 22px;
+    padding-left: 3px;
   }
 
   .contacts-group__row {
     display: flex;
 
     &:last-child {
-      padding-left: 51px;
+      padding-left: 50px;
     }
   }
 
@@ -100,7 +101,12 @@
 
 @media (min-width: @desktop-width) {
   .contacts-group {
-    width: 178px;
+    width: 183px;
+    padding-top: 47px;
+  }
+
+  .contacts-group__title {
+    padding-left: 5px;
   }
 
   .contacts-group__container {
